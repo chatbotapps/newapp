@@ -1,0 +1,72 @@
+/*.navtab {
+    margin-top: -10px;
+}
+
+.navtab:hover {
+    background-color: black;
+  } */
+
+ /* Style the navigation menu */
+.navbar {
+    width: 100%;
+   /* margin-top: -17px; */
+  float: left;
+   padding: 0px;
+   margin-top: -8px;
+  }
+  
+  /* Navigation links */
+  .navbar a {
+    float: left;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 17px;
+    background-color: rgb(223, 217, 217);
+    width: 25%; /* Four equal-width links. If you have two links, use 50%, and 33.33% for three links, etc.. */
+    text-align: center; /* If you want the text to be centered */
+    border-bottom: 3px solid transparent;
+    color: black;
+  }
+  
+  .navbar a:hover {
+    border-bottom: 3px solid blue;
+  }
+  
+  /* Style the current/active link */
+  .navbar a.active {
+    border-bottom: 3px solid blue;
+  }
+  
+  /* Add responsiveness - on screens less than 500px, make the navigation links appear on top of each other, instead of next to each other */
+  @media screen and (max-width: 500px) {
+    .navbar a {
+      float: none;
+      display: block;
+      width: 100%;
+      text-align: left; /* If you want the text to be left-aligned on small screens */
+    }
+  }
+
+  fieldset.linedtext {
+    border-top: 1px solid black;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    display: block;
+    text-align: center;
+  }
+
+  fieldset.linedtext legend{
+    padding: 5px 10px;
+}
+
+.buttontab {
+  margin-right: 10px;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  text-align: center;
+}

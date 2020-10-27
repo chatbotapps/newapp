@@ -1,0 +1,41 @@
+<div *ngFor = "let pr of fruits ; let i = index" class="row">
+    
+    <div class="card q-card" style="width: 18rem;">
+      <img class="card-img-top" src="{{pr.imgLink}}"> 
+      <div class="card-body">
+          <h5 class="card-title">{{pr.productName}}</h5>
+          <p class="card-text">{{pr.description}}</p>
+        
+      </div>
+      <hr>
+      <div class = "row" style = "margin-top: -35px;">
+        <div class = "col-2">
+        <button type="button" class="btn btn-primary" style = "border-radius: 50%;"> - </button> 
+        </div>
+        <div class = "col"></div>
+        <div class = "col-2">
+          <button type="button" class= "btn btn-primary" style = "border-radius: 50%;"> + </button> 
+          </div>
+      </div>
+      <div style= " font-weight:bold; text-align: center;"> {{pr.price}} $ </div>
+  </div>
+  <div class="card q-card" style="width: 18rem;">
+      <img class="card-img-top" src="{{pr.imgLink}}"> 
+      <div class="card-body">
+        <h5 class="card-title">{{pr.productName}}</h5>
+        <p class="card-text">{{pr.description}}</p>
+    </div>
+    <div class = "row">
+      <div class = "col-2">
+      <button type="button" (click) = "remove(pr)" class="btn btn-primary" style = "border-radius: 50%;"> - </button> 
+      </div> 
+      <div class = "col" style = "text-align:center" > {{ productCount}}</div>
+      <div class = "col-2">
+        <button type="button" (click) = "addToCart(pr)" class= "btn btn-primary" style = "border-radius: 50%;"> + </button> 
+        </div>
+    </div>
+
+    <div style= " font-weight:bold; text-align: center;"> {{pr.price}} $ </div>
+    </div>
+  </div>
+  

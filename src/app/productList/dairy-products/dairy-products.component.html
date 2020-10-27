@@ -1,0 +1,92 @@
+<div class="row" style = "padding-right: 10px; padding-left: 10px;" >
+  <ng-container *ngFor="let pr of dairyProduct ; let i = index">
+    <div class="col" style = "padding-right: 10px; padding-left: 10px; padding-bottom: 10px; padding-top: 10px;">
+      <div class="card" style="width: 100%;">
+        <!--  <img class="card-img-top" src="{{pr.imgLink}}"> -->
+        <div *ngIf="pr" class="image" [ngStyle]="{'background-image': 'url('+ pr.imgLink +')'}">
+          <div class="card-body">
+            <h5 class="card-title">{{pr.productName}}</h5>
+            <p class="card-text">{{pr.description}}</p>
+          </div>
+        </div>
+        <hr>
+        <div class="row" style="margin-top: -35px;">
+          <div class="col-2">
+            <button type="button" (click)="remove(pr)" class="btn btn-primary" style="border-radius: 50%;"> - </button>
+          </div>
+          <div class="col" *ngFor = "let count of items"  (invoke) = "addtoCart(count)"> {{count.quantity}} </div>
+          <div class="col-2" style = "margin-right: -20px">
+            <button type="button" (click) = "addToCart(pr)" (click) = "productCount=productCount+1" class= "btn btn-primary" style = "border-radius: 50%;"> + </button>
+          </div>
+        </div>
+        <div style=" font-weight:bold; text-align: center;"> {{pr.price}} $ </div>
+      </div>
+    </div>
+    <div *ngIf="(i+1) %2 === 0" class="w-100"></div>
+
+  </ng-container>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<div *ngFor = "let pr of dairyProduct ; let i = index">
+
+      <div class="card q-card" style = "width: 50%;"> -->
+<!--  <img class="card-img-top" src="{{pr.imgLink}}"> -->
+<!--     <div *ngIf= "pr" [ngStyle]="{'background-image': 'url('+ pr.imgLink +')'}">
+        <div class="card-body">
+            <h5 class="card-title">{{pr.productName}}</h5>
+            <p class="card-text">{{pr.description}}</p>
+          </div>
+        </div>
+        <hr>
+        <div class = "row" style = "margin-top: -35px;">
+          <div class = "col-2">
+          <button type="button" class="btn btn-primary" style = "border-radius: 50%;"> - </button> 
+          </div>
+          <div class = "col"></div>
+          <div class = "col-2">
+            <button type="button" class= "btn btn-primary" style = "border-radius: 50%;"> + </button> 
+            </div>
+        </div>
+        <div style= " font-weight:bold; text-align: center;"> {{pr.price}} $ </div>
+    </div>
+</div>    
+-->
+
+<!-- <div [style.background-image]="'url(' + pr.imgLink + ')'"> </div>
+    <div class="card q-card" style="width: 18rem;">
+        <div [style.background-image]="'url(' + pr.imgLink + ')'"> </div>
+        <div class="card-body">
+          <h5 class="card-title">{{pr.productName}}</h5>
+          <p class="card-text">{{pr.description}}</p>
+      </div>
+      <div class = "row">
+        <div class = "col-2">
+        <button type="button" (click) = "remove(pr)" class="btn btn-primary" style = "border-radius: 50%;"> - </button> 
+        </div> 
+        <div class = "col" style = "text-align:center" > {{ productCount}}</div>
+        <div class = "col-2">
+          <button type="button" (click) = "addToCart(pr)" class= "btn btn-primary" style = "border-radius: 50%;"> + </button> 
+          </div>
+      </div>
+
+      <div style= " font-weight:bold; text-align: center;"> {{pr.price}} $ </div>
+      </div>
+    </div> -->

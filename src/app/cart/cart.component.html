@@ -1,0 +1,43 @@
+<div class= "fixed-top">
+    <h3 style="background-color: #107dac;font-family:sans-serif">My Order</h3>
+</div>
+    <table class="table" style= "margin-top: 30px;">
+        <thead>
+            <tr>
+              Order Details
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let order of items">
+                <td>
+                    {{order.product.productName}}
+                </td>
+
+                <td>
+                    <button type="button" (click) = "remove(order.product)"  (click)= "order.quantity >1 ? order.quantity=order.quantity-1 : order.quantity" class="btn btn-primary" style = "border-radius: 50%;"> - </button> 
+                </td>
+                <td>
+                    {{order.quantity}}
+                </td>
+                <td>
+                    <button type="button" (click) = "add(order.product)" (click)= "order.quantity=order.quantity+1"  (click)="amount=amount+order.product.price"  class="btn btn-primary" style = "border-radius: 50%;"> + </button> 
+                </td>
+                <td>
+                    {{order.product.price*order.quantity}}
+                </td>
+            </tr>
+           </tbody>
+    <div> Total Payment</div>
+    {{amount}}
+<div>
+    <h4 style= "text-align: center; width: 100%"> Special Instructions</h4>
+    <i class='far fa-comment'></i>
+    <textarea style= "float:left ;width: 100%" row="5" column="20">
+       
+    </textarea>
+</div>
+
+
+
+

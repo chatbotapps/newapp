@@ -1,0 +1,29 @@
+<div *ngFor = "let pr of consumerProduct ; let i = index" class="row">
+    <div class="col-md-6">
+            <div class="card q-card full-height relative-position " >  <!--style="height:5rem;width: 45rem;-->
+      <img class="card-img-top q-img overflow-hidden img-responsive margin" src="{{pr.imgLink}}" style="-webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;" alt="Image">   <!--style="height:fit-content; width: 18rem;--> 
+      <div class="card-body">
+          <h5 class="card-title">{{pr.productName}}</h5>
+          <p class="card-text">{{pr.description}}</p>
+          <div style= " font-weight:bold; text-align: center;"> {{pr.price}} $ </div>
+        </div>
+        
+      </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card q-card full-height relative-position " >  <!--style="height:5rem;width: 45rem;-->
+<img class="card-img-top q-img overflow-hidden img-responsive margin " src="{{pr.imgLink}}" style=" -webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;" alt="Image" >   <!--style="height:fit-content; width: 18rem;--> 
+<div class="card-body">
+  <h5 class="card-title">{{pr.productName}}</h5>
+  <p class="card-text">{{pr.description}}</p>
+  <div style= " font-weight:bold; text-align: center;"> {{pr.price}} $ </div>
+</div>
+</div>
+    </div>
+  </div>
